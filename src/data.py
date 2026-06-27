@@ -1,13 +1,4 @@
-import seaborn as sns
-
-from src.utils import save_dataset
-
+import pandas as pd
 
 def load_data():
-    df = sns.load_dataset("titanic")
-
-    save_dataset(
-        df,
-        "raw/titanic_raw.csv"
-    )
-    return df
+    return pd.read_csv("data/raw/titanic_raw.csv")
